@@ -24,5 +24,5 @@ DENSE_NET_121_CFG = [
     xnet = DenseNet()
     xnet.build_model(DENSE_NET_121_CFG)
 
-3. The generated DenseNet121 can be viewed in (http://ethereon.github.io/netscope/#/gist/6af541e7afd34b505fd1bfae53da7040)
+3. The generated DenseNet121 can be viewed in [DenseNet121](http://ethereon.github.io/netscope/#/gist/6af541e7afd34b505fd1bfae53da7040)
 ```
