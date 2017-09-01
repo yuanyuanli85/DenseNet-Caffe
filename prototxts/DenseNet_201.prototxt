@@ -38,12 +38,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution1"
   top: "BatchNorm1"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale1"
   type: "Scale"
   bottom: "BatchNorm1"
   top: "BatchNorm1"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "conv1"
@@ -67,12 +88,33 @@ layer {
   type: "BatchNorm"
   bottom: "pool1"
   top: "BatchNorm2"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale2"
   type: "Scale"
   bottom: "BatchNorm2"
   top: "BatchNorm2"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU1"
@@ -104,12 +146,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution2"
   top: "BatchNorm3"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale3"
   type: "Scale"
   bottom: "BatchNorm3"
   top: "BatchNorm3"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU2"
@@ -148,12 +211,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat1"
   top: "BatchNorm4"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale4"
   type: "Scale"
   bottom: "BatchNorm4"
   top: "BatchNorm4"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU3"
@@ -185,12 +269,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution4"
   top: "BatchNorm5"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale5"
   type: "Scale"
   bottom: "BatchNorm5"
   top: "BatchNorm5"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU4"
@@ -229,12 +334,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat2"
   top: "BatchNorm6"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale6"
   type: "Scale"
   bottom: "BatchNorm6"
   top: "BatchNorm6"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU5"
@@ -266,12 +392,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution6"
   top: "BatchNorm7"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale7"
   type: "Scale"
   bottom: "BatchNorm7"
   top: "BatchNorm7"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU6"
@@ -310,12 +457,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat3"
   top: "BatchNorm8"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale8"
   type: "Scale"
   bottom: "BatchNorm8"
   top: "BatchNorm8"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU7"
@@ -347,12 +515,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution8"
   top: "BatchNorm9"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale9"
   type: "Scale"
   bottom: "BatchNorm9"
   top: "BatchNorm9"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU8"
@@ -391,12 +580,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat4"
   top: "BatchNorm10"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale10"
   type: "Scale"
   bottom: "BatchNorm10"
   top: "BatchNorm10"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU9"
@@ -428,12 +638,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution10"
   top: "BatchNorm11"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale11"
   type: "Scale"
   bottom: "BatchNorm11"
   top: "BatchNorm11"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU10"
@@ -472,12 +703,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat5"
   top: "BatchNorm12"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale12"
   type: "Scale"
   bottom: "BatchNorm12"
   top: "BatchNorm12"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU11"
@@ -509,12 +761,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution12"
   top: "BatchNorm13"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale13"
   type: "Scale"
   bottom: "BatchNorm13"
   top: "BatchNorm13"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU12"
@@ -553,12 +826,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat6"
   top: "BatchNorm14"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale14"
   type: "Scale"
   bottom: "BatchNorm14"
   top: "BatchNorm14"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU13"
@@ -601,12 +895,33 @@ layer {
   type: "BatchNorm"
   bottom: "Pooling1"
   top: "BatchNorm15"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale15"
   type: "Scale"
   bottom: "BatchNorm15"
   top: "BatchNorm15"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU14"
@@ -638,12 +953,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution15"
   top: "BatchNorm16"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale16"
   type: "Scale"
   bottom: "BatchNorm16"
   top: "BatchNorm16"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU15"
@@ -682,12 +1018,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat7"
   top: "BatchNorm17"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale17"
   type: "Scale"
   bottom: "BatchNorm17"
   top: "BatchNorm17"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU16"
@@ -719,12 +1076,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution17"
   top: "BatchNorm18"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale18"
   type: "Scale"
   bottom: "BatchNorm18"
   top: "BatchNorm18"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU17"
@@ -763,12 +1141,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat8"
   top: "BatchNorm19"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale19"
   type: "Scale"
   bottom: "BatchNorm19"
   top: "BatchNorm19"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU18"
@@ -800,12 +1199,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution19"
   top: "BatchNorm20"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale20"
   type: "Scale"
   bottom: "BatchNorm20"
   top: "BatchNorm20"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU19"
@@ -844,12 +1264,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat9"
   top: "BatchNorm21"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale21"
   type: "Scale"
   bottom: "BatchNorm21"
   top: "BatchNorm21"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU20"
@@ -881,12 +1322,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution21"
   top: "BatchNorm22"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale22"
   type: "Scale"
   bottom: "BatchNorm22"
   top: "BatchNorm22"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU21"
@@ -925,12 +1387,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat10"
   top: "BatchNorm23"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale23"
   type: "Scale"
   bottom: "BatchNorm23"
   top: "BatchNorm23"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU22"
@@ -962,12 +1445,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution23"
   top: "BatchNorm24"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale24"
   type: "Scale"
   bottom: "BatchNorm24"
   top: "BatchNorm24"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU23"
@@ -1006,12 +1510,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat11"
   top: "BatchNorm25"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale25"
   type: "Scale"
   bottom: "BatchNorm25"
   top: "BatchNorm25"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU24"
@@ -1043,12 +1568,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution25"
   top: "BatchNorm26"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale26"
   type: "Scale"
   bottom: "BatchNorm26"
   top: "BatchNorm26"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU25"
@@ -1087,12 +1633,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat12"
   top: "BatchNorm27"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale27"
   type: "Scale"
   bottom: "BatchNorm27"
   top: "BatchNorm27"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU26"
@@ -1124,12 +1691,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution27"
   top: "BatchNorm28"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale28"
   type: "Scale"
   bottom: "BatchNorm28"
   top: "BatchNorm28"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU27"
@@ -1168,12 +1756,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat13"
   top: "BatchNorm29"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale29"
   type: "Scale"
   bottom: "BatchNorm29"
   top: "BatchNorm29"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU28"
@@ -1205,12 +1814,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution29"
   top: "BatchNorm30"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale30"
   type: "Scale"
   bottom: "BatchNorm30"
   top: "BatchNorm30"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU29"
@@ -1249,12 +1879,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat14"
   top: "BatchNorm31"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale31"
   type: "Scale"
   bottom: "BatchNorm31"
   top: "BatchNorm31"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU30"
@@ -1286,12 +1937,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution31"
   top: "BatchNorm32"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale32"
   type: "Scale"
   bottom: "BatchNorm32"
   top: "BatchNorm32"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU31"
@@ -1330,12 +2002,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat15"
   top: "BatchNorm33"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale33"
   type: "Scale"
   bottom: "BatchNorm33"
   top: "BatchNorm33"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU32"
@@ -1367,12 +2060,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution33"
   top: "BatchNorm34"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale34"
   type: "Scale"
   bottom: "BatchNorm34"
   top: "BatchNorm34"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU33"
@@ -1411,12 +2125,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat16"
   top: "BatchNorm35"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale35"
   type: "Scale"
   bottom: "BatchNorm35"
   top: "BatchNorm35"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU34"
@@ -1448,12 +2183,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution35"
   top: "BatchNorm36"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale36"
   type: "Scale"
   bottom: "BatchNorm36"
   top: "BatchNorm36"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU35"
@@ -1492,12 +2248,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat17"
   top: "BatchNorm37"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale37"
   type: "Scale"
   bottom: "BatchNorm37"
   top: "BatchNorm37"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU36"
@@ -1529,12 +2306,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution37"
   top: "BatchNorm38"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale38"
   type: "Scale"
   bottom: "BatchNorm38"
   top: "BatchNorm38"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU37"
@@ -1573,12 +2371,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat18"
   top: "BatchNorm39"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale39"
   type: "Scale"
   bottom: "BatchNorm39"
   top: "BatchNorm39"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU38"
@@ -1621,12 +2440,33 @@ layer {
   type: "BatchNorm"
   bottom: "Pooling2"
   top: "BatchNorm40"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale40"
   type: "Scale"
   bottom: "BatchNorm40"
   top: "BatchNorm40"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU39"
@@ -1658,12 +2498,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution40"
   top: "BatchNorm41"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale41"
   type: "Scale"
   bottom: "BatchNorm41"
   top: "BatchNorm41"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU40"
@@ -1702,12 +2563,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat19"
   top: "BatchNorm42"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale42"
   type: "Scale"
   bottom: "BatchNorm42"
   top: "BatchNorm42"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU41"
@@ -1739,12 +2621,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution42"
   top: "BatchNorm43"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale43"
   type: "Scale"
   bottom: "BatchNorm43"
   top: "BatchNorm43"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU42"
@@ -1783,12 +2686,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat20"
   top: "BatchNorm44"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale44"
   type: "Scale"
   bottom: "BatchNorm44"
   top: "BatchNorm44"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU43"
@@ -1820,12 +2744,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution44"
   top: "BatchNorm45"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale45"
   type: "Scale"
   bottom: "BatchNorm45"
   top: "BatchNorm45"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU44"
@@ -1864,12 +2809,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat21"
   top: "BatchNorm46"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale46"
   type: "Scale"
   bottom: "BatchNorm46"
   top: "BatchNorm46"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU45"
@@ -1901,12 +2867,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution46"
   top: "BatchNorm47"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale47"
   type: "Scale"
   bottom: "BatchNorm47"
   top: "BatchNorm47"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU46"
@@ -1945,12 +2932,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat22"
   top: "BatchNorm48"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale48"
   type: "Scale"
   bottom: "BatchNorm48"
   top: "BatchNorm48"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU47"
@@ -1982,12 +2990,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution48"
   top: "BatchNorm49"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale49"
   type: "Scale"
   bottom: "BatchNorm49"
   top: "BatchNorm49"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU48"
@@ -2026,12 +3055,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat23"
   top: "BatchNorm50"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale50"
   type: "Scale"
   bottom: "BatchNorm50"
   top: "BatchNorm50"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU49"
@@ -2063,12 +3113,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution50"
   top: "BatchNorm51"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale51"
   type: "Scale"
   bottom: "BatchNorm51"
   top: "BatchNorm51"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU50"
@@ -2107,12 +3178,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat24"
   top: "BatchNorm52"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale52"
   type: "Scale"
   bottom: "BatchNorm52"
   top: "BatchNorm52"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU51"
@@ -2144,12 +3236,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution52"
   top: "BatchNorm53"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale53"
   type: "Scale"
   bottom: "BatchNorm53"
   top: "BatchNorm53"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU52"
@@ -2188,12 +3301,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat25"
   top: "BatchNorm54"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale54"
   type: "Scale"
   bottom: "BatchNorm54"
   top: "BatchNorm54"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU53"
@@ -2225,12 +3359,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution54"
   top: "BatchNorm55"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale55"
   type: "Scale"
   bottom: "BatchNorm55"
   top: "BatchNorm55"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU54"
@@ -2269,12 +3424,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat26"
   top: "BatchNorm56"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale56"
   type: "Scale"
   bottom: "BatchNorm56"
   top: "BatchNorm56"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU55"
@@ -2306,12 +3482,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution56"
   top: "BatchNorm57"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale57"
   type: "Scale"
   bottom: "BatchNorm57"
   top: "BatchNorm57"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU56"
@@ -2350,12 +3547,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat27"
   top: "BatchNorm58"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale58"
   type: "Scale"
   bottom: "BatchNorm58"
   top: "BatchNorm58"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU57"
@@ -2387,12 +3605,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution58"
   top: "BatchNorm59"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale59"
   type: "Scale"
   bottom: "BatchNorm59"
   top: "BatchNorm59"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU58"
@@ -2431,12 +3670,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat28"
   top: "BatchNorm60"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale60"
   type: "Scale"
   bottom: "BatchNorm60"
   top: "BatchNorm60"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU59"
@@ -2468,12 +3728,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution60"
   top: "BatchNorm61"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale61"
   type: "Scale"
   bottom: "BatchNorm61"
   top: "BatchNorm61"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU60"
@@ -2512,12 +3793,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat29"
   top: "BatchNorm62"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale62"
   type: "Scale"
   bottom: "BatchNorm62"
   top: "BatchNorm62"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU61"
@@ -2549,12 +3851,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution62"
   top: "BatchNorm63"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale63"
   type: "Scale"
   bottom: "BatchNorm63"
   top: "BatchNorm63"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU62"
@@ -2593,12 +3916,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat30"
   top: "BatchNorm64"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale64"
   type: "Scale"
   bottom: "BatchNorm64"
   top: "BatchNorm64"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU63"
@@ -2630,12 +3974,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution64"
   top: "BatchNorm65"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale65"
   type: "Scale"
   bottom: "BatchNorm65"
   top: "BatchNorm65"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU64"
@@ -2674,12 +4039,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat31"
   top: "BatchNorm66"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale66"
   type: "Scale"
   bottom: "BatchNorm66"
   top: "BatchNorm66"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU65"
@@ -2711,12 +4097,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution66"
   top: "BatchNorm67"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale67"
   type: "Scale"
   bottom: "BatchNorm67"
   top: "BatchNorm67"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU66"
@@ -2755,12 +4162,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat32"
   top: "BatchNorm68"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale68"
   type: "Scale"
   bottom: "BatchNorm68"
   top: "BatchNorm68"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU67"
@@ -2792,12 +4220,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution68"
   top: "BatchNorm69"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale69"
   type: "Scale"
   bottom: "BatchNorm69"
   top: "BatchNorm69"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU68"
@@ -2836,12 +4285,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat33"
   top: "BatchNorm70"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale70"
   type: "Scale"
   bottom: "BatchNorm70"
   top: "BatchNorm70"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU69"
@@ -2873,12 +4343,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution70"
   top: "BatchNorm71"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale71"
   type: "Scale"
   bottom: "BatchNorm71"
   top: "BatchNorm71"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU70"
@@ -2917,12 +4408,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat34"
   top: "BatchNorm72"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale72"
   type: "Scale"
   bottom: "BatchNorm72"
   top: "BatchNorm72"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU71"
@@ -2954,12 +4466,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution72"
   top: "BatchNorm73"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale73"
   type: "Scale"
   bottom: "BatchNorm73"
   top: "BatchNorm73"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU72"
@@ -2998,12 +4531,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat35"
   top: "BatchNorm74"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale74"
   type: "Scale"
   bottom: "BatchNorm74"
   top: "BatchNorm74"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU73"
@@ -3035,12 +4589,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution74"
   top: "BatchNorm75"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale75"
   type: "Scale"
   bottom: "BatchNorm75"
   top: "BatchNorm75"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU74"
@@ -3079,12 +4654,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat36"
   top: "BatchNorm76"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale76"
   type: "Scale"
   bottom: "BatchNorm76"
   top: "BatchNorm76"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU75"
@@ -3116,12 +4712,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution76"
   top: "BatchNorm77"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale77"
   type: "Scale"
   bottom: "BatchNorm77"
   top: "BatchNorm77"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU76"
@@ -3160,12 +4777,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat37"
   top: "BatchNorm78"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale78"
   type: "Scale"
   bottom: "BatchNorm78"
   top: "BatchNorm78"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU77"
@@ -3197,12 +4835,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution78"
   top: "BatchNorm79"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale79"
   type: "Scale"
   bottom: "BatchNorm79"
   top: "BatchNorm79"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU78"
@@ -3241,12 +4900,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat38"
   top: "BatchNorm80"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale80"
   type: "Scale"
   bottom: "BatchNorm80"
   top: "BatchNorm80"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU79"
@@ -3278,12 +4958,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution80"
   top: "BatchNorm81"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale81"
   type: "Scale"
   bottom: "BatchNorm81"
   top: "BatchNorm81"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU80"
@@ -3322,12 +5023,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat39"
   top: "BatchNorm82"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale82"
   type: "Scale"
   bottom: "BatchNorm82"
   top: "BatchNorm82"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU81"
@@ -3359,12 +5081,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution82"
   top: "BatchNorm83"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale83"
   type: "Scale"
   bottom: "BatchNorm83"
   top: "BatchNorm83"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU82"
@@ -3403,12 +5146,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat40"
   top: "BatchNorm84"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale84"
   type: "Scale"
   bottom: "BatchNorm84"
   top: "BatchNorm84"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU83"
@@ -3440,12 +5204,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution84"
   top: "BatchNorm85"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale85"
   type: "Scale"
   bottom: "BatchNorm85"
   top: "BatchNorm85"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU84"
@@ -3484,12 +5269,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat41"
   top: "BatchNorm86"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale86"
   type: "Scale"
   bottom: "BatchNorm86"
   top: "BatchNorm86"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU85"
@@ -3521,12 +5327,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution86"
   top: "BatchNorm87"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale87"
   type: "Scale"
   bottom: "BatchNorm87"
   top: "BatchNorm87"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU86"
@@ -3565,12 +5392,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat42"
   top: "BatchNorm88"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale88"
   type: "Scale"
   bottom: "BatchNorm88"
   top: "BatchNorm88"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU87"
@@ -3602,12 +5450,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution88"
   top: "BatchNorm89"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale89"
   type: "Scale"
   bottom: "BatchNorm89"
   top: "BatchNorm89"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU88"
@@ -3646,12 +5515,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat43"
   top: "BatchNorm90"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale90"
   type: "Scale"
   bottom: "BatchNorm90"
   top: "BatchNorm90"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU89"
@@ -3683,12 +5573,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution90"
   top: "BatchNorm91"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale91"
   type: "Scale"
   bottom: "BatchNorm91"
   top: "BatchNorm91"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU90"
@@ -3727,12 +5638,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat44"
   top: "BatchNorm92"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale92"
   type: "Scale"
   bottom: "BatchNorm92"
   top: "BatchNorm92"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU91"
@@ -3764,12 +5696,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution92"
   top: "BatchNorm93"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale93"
   type: "Scale"
   bottom: "BatchNorm93"
   top: "BatchNorm93"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU92"
@@ -3808,12 +5761,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat45"
   top: "BatchNorm94"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale94"
   type: "Scale"
   bottom: "BatchNorm94"
   top: "BatchNorm94"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU93"
@@ -3845,12 +5819,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution94"
   top: "BatchNorm95"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale95"
   type: "Scale"
   bottom: "BatchNorm95"
   top: "BatchNorm95"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU94"
@@ -3889,12 +5884,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat46"
   top: "BatchNorm96"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale96"
   type: "Scale"
   bottom: "BatchNorm96"
   top: "BatchNorm96"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU95"
@@ -3926,12 +5942,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution96"
   top: "BatchNorm97"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale97"
   type: "Scale"
   bottom: "BatchNorm97"
   top: "BatchNorm97"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU96"
@@ -3970,12 +6007,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat47"
   top: "BatchNorm98"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale98"
   type: "Scale"
   bottom: "BatchNorm98"
   top: "BatchNorm98"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU97"
@@ -4007,12 +6065,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution98"
   top: "BatchNorm99"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale99"
   type: "Scale"
   bottom: "BatchNorm99"
   top: "BatchNorm99"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU98"
@@ -4051,12 +6130,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat48"
   top: "BatchNorm100"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale100"
   type: "Scale"
   bottom: "BatchNorm100"
   top: "BatchNorm100"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU99"
@@ -4088,12 +6188,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution100"
   top: "BatchNorm101"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale101"
   type: "Scale"
   bottom: "BatchNorm101"
   top: "BatchNorm101"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU100"
@@ -4132,12 +6253,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat49"
   top: "BatchNorm102"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale102"
   type: "Scale"
   bottom: "BatchNorm102"
   top: "BatchNorm102"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU101"
@@ -4169,12 +6311,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution102"
   top: "BatchNorm103"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale103"
   type: "Scale"
   bottom: "BatchNorm103"
   top: "BatchNorm103"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU102"
@@ -4213,12 +6376,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat50"
   top: "BatchNorm104"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale104"
   type: "Scale"
   bottom: "BatchNorm104"
   top: "BatchNorm104"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU103"
@@ -4250,12 +6434,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution104"
   top: "BatchNorm105"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale105"
   type: "Scale"
   bottom: "BatchNorm105"
   top: "BatchNorm105"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU104"
@@ -4294,12 +6499,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat51"
   top: "BatchNorm106"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale106"
   type: "Scale"
   bottom: "BatchNorm106"
   top: "BatchNorm106"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU105"
@@ -4331,12 +6557,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution106"
   top: "BatchNorm107"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale107"
   type: "Scale"
   bottom: "BatchNorm107"
   top: "BatchNorm107"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU106"
@@ -4375,12 +6622,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat52"
   top: "BatchNorm108"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale108"
   type: "Scale"
   bottom: "BatchNorm108"
   top: "BatchNorm108"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU107"
@@ -4412,12 +6680,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution108"
   top: "BatchNorm109"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale109"
   type: "Scale"
   bottom: "BatchNorm109"
   top: "BatchNorm109"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU108"
@@ -4456,12 +6745,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat53"
   top: "BatchNorm110"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale110"
   type: "Scale"
   bottom: "BatchNorm110"
   top: "BatchNorm110"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU109"
@@ -4493,12 +6803,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution110"
   top: "BatchNorm111"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale111"
   type: "Scale"
   bottom: "BatchNorm111"
   top: "BatchNorm111"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU110"
@@ -4537,12 +6868,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat54"
   top: "BatchNorm112"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale112"
   type: "Scale"
   bottom: "BatchNorm112"
   top: "BatchNorm112"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU111"
@@ -4574,12 +6926,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution112"
   top: "BatchNorm113"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale113"
   type: "Scale"
   bottom: "BatchNorm113"
   top: "BatchNorm113"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU112"
@@ -4618,12 +6991,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat55"
   top: "BatchNorm114"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale114"
   type: "Scale"
   bottom: "BatchNorm114"
   top: "BatchNorm114"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU113"
@@ -4655,12 +7049,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution114"
   top: "BatchNorm115"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale115"
   type: "Scale"
   bottom: "BatchNorm115"
   top: "BatchNorm115"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU114"
@@ -4699,12 +7114,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat56"
   top: "BatchNorm116"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale116"
   type: "Scale"
   bottom: "BatchNorm116"
   top: "BatchNorm116"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU115"
@@ -4736,12 +7172,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution116"
   top: "BatchNorm117"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale117"
   type: "Scale"
   bottom: "BatchNorm117"
   top: "BatchNorm117"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU116"
@@ -4780,12 +7237,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat57"
   top: "BatchNorm118"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale118"
   type: "Scale"
   bottom: "BatchNorm118"
   top: "BatchNorm118"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU117"
@@ -4817,12 +7295,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution118"
   top: "BatchNorm119"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale119"
   type: "Scale"
   bottom: "BatchNorm119"
   top: "BatchNorm119"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU118"
@@ -4861,12 +7360,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat58"
   top: "BatchNorm120"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale120"
   type: "Scale"
   bottom: "BatchNorm120"
   top: "BatchNorm120"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU119"
@@ -4898,12 +7418,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution120"
   top: "BatchNorm121"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale121"
   type: "Scale"
   bottom: "BatchNorm121"
   top: "BatchNorm121"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU120"
@@ -4942,12 +7483,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat59"
   top: "BatchNorm122"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale122"
   type: "Scale"
   bottom: "BatchNorm122"
   top: "BatchNorm122"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU121"
@@ -4979,12 +7541,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution122"
   top: "BatchNorm123"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale123"
   type: "Scale"
   bottom: "BatchNorm123"
   top: "BatchNorm123"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU122"
@@ -5023,12 +7606,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat60"
   top: "BatchNorm124"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale124"
   type: "Scale"
   bottom: "BatchNorm124"
   top: "BatchNorm124"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU123"
@@ -5060,12 +7664,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution124"
   top: "BatchNorm125"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale125"
   type: "Scale"
   bottom: "BatchNorm125"
   top: "BatchNorm125"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU124"
@@ -5104,12 +7729,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat61"
   top: "BatchNorm126"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale126"
   type: "Scale"
   bottom: "BatchNorm126"
   top: "BatchNorm126"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU125"
@@ -5141,12 +7787,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution126"
   top: "BatchNorm127"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale127"
   type: "Scale"
   bottom: "BatchNorm127"
   top: "BatchNorm127"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU126"
@@ -5185,12 +7852,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat62"
   top: "BatchNorm128"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale128"
   type: "Scale"
   bottom: "BatchNorm128"
   top: "BatchNorm128"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU127"
@@ -5222,12 +7910,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution128"
   top: "BatchNorm129"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale129"
   type: "Scale"
   bottom: "BatchNorm129"
   top: "BatchNorm129"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU128"
@@ -5266,12 +7975,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat63"
   top: "BatchNorm130"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale130"
   type: "Scale"
   bottom: "BatchNorm130"
   top: "BatchNorm130"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU129"
@@ -5303,12 +8033,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution130"
   top: "BatchNorm131"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale131"
   type: "Scale"
   bottom: "BatchNorm131"
   top: "BatchNorm131"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU130"
@@ -5347,12 +8098,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat64"
   top: "BatchNorm132"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale132"
   type: "Scale"
   bottom: "BatchNorm132"
   top: "BatchNorm132"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU131"
@@ -5384,12 +8156,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution132"
   top: "BatchNorm133"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale133"
   type: "Scale"
   bottom: "BatchNorm133"
   top: "BatchNorm133"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU132"
@@ -5428,12 +8221,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat65"
   top: "BatchNorm134"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale134"
   type: "Scale"
   bottom: "BatchNorm134"
   top: "BatchNorm134"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU133"
@@ -5465,12 +8279,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution134"
   top: "BatchNorm135"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale135"
   type: "Scale"
   bottom: "BatchNorm135"
   top: "BatchNorm135"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU134"
@@ -5509,12 +8344,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat66"
   top: "BatchNorm136"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale136"
   type: "Scale"
   bottom: "BatchNorm136"
   top: "BatchNorm136"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU135"
@@ -5557,12 +8413,33 @@ layer {
   type: "BatchNorm"
   bottom: "Pooling3"
   top: "BatchNorm137"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale137"
   type: "Scale"
   bottom: "BatchNorm137"
   top: "BatchNorm137"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU136"
@@ -5594,12 +8471,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution137"
   top: "BatchNorm138"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale138"
   type: "Scale"
   bottom: "BatchNorm138"
   top: "BatchNorm138"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU137"
@@ -5638,12 +8536,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat67"
   top: "BatchNorm139"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale139"
   type: "Scale"
   bottom: "BatchNorm139"
   top: "BatchNorm139"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU138"
@@ -5675,12 +8594,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution139"
   top: "BatchNorm140"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale140"
   type: "Scale"
   bottom: "BatchNorm140"
   top: "BatchNorm140"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU139"
@@ -5719,12 +8659,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat68"
   top: "BatchNorm141"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale141"
   type: "Scale"
   bottom: "BatchNorm141"
   top: "BatchNorm141"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU140"
@@ -5756,12 +8717,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution141"
   top: "BatchNorm142"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale142"
   type: "Scale"
   bottom: "BatchNorm142"
   top: "BatchNorm142"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU141"
@@ -5800,12 +8782,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat69"
   top: "BatchNorm143"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale143"
   type: "Scale"
   bottom: "BatchNorm143"
   top: "BatchNorm143"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU142"
@@ -5837,12 +8840,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution143"
   top: "BatchNorm144"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale144"
   type: "Scale"
   bottom: "BatchNorm144"
   top: "BatchNorm144"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU143"
@@ -5881,12 +8905,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat70"
   top: "BatchNorm145"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale145"
   type: "Scale"
   bottom: "BatchNorm145"
   top: "BatchNorm145"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU144"
@@ -5918,12 +8963,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution145"
   top: "BatchNorm146"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale146"
   type: "Scale"
   bottom: "BatchNorm146"
   top: "BatchNorm146"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU145"
@@ -5962,12 +9028,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat71"
   top: "BatchNorm147"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale147"
   type: "Scale"
   bottom: "BatchNorm147"
   top: "BatchNorm147"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU146"
@@ -5999,12 +9086,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution147"
   top: "BatchNorm148"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale148"
   type: "Scale"
   bottom: "BatchNorm148"
   top: "BatchNorm148"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU147"
@@ -6043,12 +9151,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat72"
   top: "BatchNorm149"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale149"
   type: "Scale"
   bottom: "BatchNorm149"
   top: "BatchNorm149"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU148"
@@ -6080,12 +9209,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution149"
   top: "BatchNorm150"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale150"
   type: "Scale"
   bottom: "BatchNorm150"
   top: "BatchNorm150"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU149"
@@ -6124,12 +9274,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat73"
   top: "BatchNorm151"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale151"
   type: "Scale"
   bottom: "BatchNorm151"
   top: "BatchNorm151"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU150"
@@ -6161,12 +9332,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution151"
   top: "BatchNorm152"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale152"
   type: "Scale"
   bottom: "BatchNorm152"
   top: "BatchNorm152"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU151"
@@ -6205,12 +9397,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat74"
   top: "BatchNorm153"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale153"
   type: "Scale"
   bottom: "BatchNorm153"
   top: "BatchNorm153"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU152"
@@ -6242,12 +9455,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution153"
   top: "BatchNorm154"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale154"
   type: "Scale"
   bottom: "BatchNorm154"
   top: "BatchNorm154"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU153"
@@ -6286,12 +9520,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat75"
   top: "BatchNorm155"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale155"
   type: "Scale"
   bottom: "BatchNorm155"
   top: "BatchNorm155"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU154"
@@ -6323,12 +9578,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution155"
   top: "BatchNorm156"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale156"
   type: "Scale"
   bottom: "BatchNorm156"
   top: "BatchNorm156"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU155"
@@ -6367,12 +9643,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat76"
   top: "BatchNorm157"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale157"
   type: "Scale"
   bottom: "BatchNorm157"
   top: "BatchNorm157"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU156"
@@ -6404,12 +9701,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution157"
   top: "BatchNorm158"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale158"
   type: "Scale"
   bottom: "BatchNorm158"
   top: "BatchNorm158"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU157"
@@ -6448,12 +9766,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat77"
   top: "BatchNorm159"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale159"
   type: "Scale"
   bottom: "BatchNorm159"
   top: "BatchNorm159"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU158"
@@ -6485,12 +9824,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution159"
   top: "BatchNorm160"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale160"
   type: "Scale"
   bottom: "BatchNorm160"
   top: "BatchNorm160"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU159"
@@ -6529,12 +9889,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat78"
   top: "BatchNorm161"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale161"
   type: "Scale"
   bottom: "BatchNorm161"
   top: "BatchNorm161"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU160"
@@ -6566,12 +9947,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution161"
   top: "BatchNorm162"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale162"
   type: "Scale"
   bottom: "BatchNorm162"
   top: "BatchNorm162"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU161"
@@ -6610,12 +10012,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat79"
   top: "BatchNorm163"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale163"
   type: "Scale"
   bottom: "BatchNorm163"
   top: "BatchNorm163"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU162"
@@ -6647,12 +10070,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution163"
   top: "BatchNorm164"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale164"
   type: "Scale"
   bottom: "BatchNorm164"
   top: "BatchNorm164"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU163"
@@ -6691,12 +10135,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat80"
   top: "BatchNorm165"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale165"
   type: "Scale"
   bottom: "BatchNorm165"
   top: "BatchNorm165"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU164"
@@ -6728,12 +10193,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution165"
   top: "BatchNorm166"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale166"
   type: "Scale"
   bottom: "BatchNorm166"
   top: "BatchNorm166"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU165"
@@ -6772,12 +10258,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat81"
   top: "BatchNorm167"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale167"
   type: "Scale"
   bottom: "BatchNorm167"
   top: "BatchNorm167"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU166"
@@ -6809,12 +10316,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution167"
   top: "BatchNorm168"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale168"
   type: "Scale"
   bottom: "BatchNorm168"
   top: "BatchNorm168"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU167"
@@ -6853,12 +10381,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat82"
   top: "BatchNorm169"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale169"
   type: "Scale"
   bottom: "BatchNorm169"
   top: "BatchNorm169"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU168"
@@ -6890,12 +10439,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution169"
   top: "BatchNorm170"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale170"
   type: "Scale"
   bottom: "BatchNorm170"
   top: "BatchNorm170"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU169"
@@ -6934,12 +10504,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat83"
   top: "BatchNorm171"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale171"
   type: "Scale"
   bottom: "BatchNorm171"
   top: "BatchNorm171"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU170"
@@ -6971,12 +10562,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution171"
   top: "BatchNorm172"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale172"
   type: "Scale"
   bottom: "BatchNorm172"
   top: "BatchNorm172"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU171"
@@ -7015,12 +10627,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat84"
   top: "BatchNorm173"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale173"
   type: "Scale"
   bottom: "BatchNorm173"
   top: "BatchNorm173"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU172"
@@ -7052,12 +10685,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution173"
   top: "BatchNorm174"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale174"
   type: "Scale"
   bottom: "BatchNorm174"
   top: "BatchNorm174"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU173"
@@ -7096,12 +10750,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat85"
   top: "BatchNorm175"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale175"
   type: "Scale"
   bottom: "BatchNorm175"
   top: "BatchNorm175"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU174"
@@ -7133,12 +10808,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution175"
   top: "BatchNorm176"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale176"
   type: "Scale"
   bottom: "BatchNorm176"
   top: "BatchNorm176"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU175"
@@ -7177,12 +10873,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat86"
   top: "BatchNorm177"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale177"
   type: "Scale"
   bottom: "BatchNorm177"
   top: "BatchNorm177"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU176"
@@ -7214,12 +10931,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution177"
   top: "BatchNorm178"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale178"
   type: "Scale"
   bottom: "BatchNorm178"
   top: "BatchNorm178"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU177"
@@ -7258,12 +10996,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat87"
   top: "BatchNorm179"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale179"
   type: "Scale"
   bottom: "BatchNorm179"
   top: "BatchNorm179"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU178"
@@ -7295,12 +11054,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution179"
   top: "BatchNorm180"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale180"
   type: "Scale"
   bottom: "BatchNorm180"
   top: "BatchNorm180"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU179"
@@ -7339,12 +11119,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat88"
   top: "BatchNorm181"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale181"
   type: "Scale"
   bottom: "BatchNorm181"
   top: "BatchNorm181"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU180"
@@ -7376,12 +11177,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution181"
   top: "BatchNorm182"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale182"
   type: "Scale"
   bottom: "BatchNorm182"
   top: "BatchNorm182"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU181"
@@ -7420,12 +11242,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat89"
   top: "BatchNorm183"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale183"
   type: "Scale"
   bottom: "BatchNorm183"
   top: "BatchNorm183"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU182"
@@ -7457,12 +11300,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution183"
   top: "BatchNorm184"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale184"
   type: "Scale"
   bottom: "BatchNorm184"
   top: "BatchNorm184"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU183"
@@ -7501,12 +11365,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat90"
   top: "BatchNorm185"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale185"
   type: "Scale"
   bottom: "BatchNorm185"
   top: "BatchNorm185"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU184"
@@ -7538,12 +11423,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution185"
   top: "BatchNorm186"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale186"
   type: "Scale"
   bottom: "BatchNorm186"
   top: "BatchNorm186"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU185"
@@ -7582,12 +11488,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat91"
   top: "BatchNorm187"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale187"
   type: "Scale"
   bottom: "BatchNorm187"
   top: "BatchNorm187"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU186"
@@ -7619,12 +11546,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution187"
   top: "BatchNorm188"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale188"
   type: "Scale"
   bottom: "BatchNorm188"
   top: "BatchNorm188"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU187"
@@ -7663,12 +11611,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat92"
   top: "BatchNorm189"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale189"
   type: "Scale"
   bottom: "BatchNorm189"
   top: "BatchNorm189"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU188"
@@ -7700,12 +11669,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution189"
   top: "BatchNorm190"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale190"
   type: "Scale"
   bottom: "BatchNorm190"
   top: "BatchNorm190"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU189"
@@ -7744,12 +11734,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat93"
   top: "BatchNorm191"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale191"
   type: "Scale"
   bottom: "BatchNorm191"
   top: "BatchNorm191"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU190"
@@ -7781,12 +11792,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution191"
   top: "BatchNorm192"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale192"
   type: "Scale"
   bottom: "BatchNorm192"
   top: "BatchNorm192"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU191"
@@ -7825,12 +11857,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat94"
   top: "BatchNorm193"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale193"
   type: "Scale"
   bottom: "BatchNorm193"
   top: "BatchNorm193"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU192"
@@ -7862,12 +11915,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution193"
   top: "BatchNorm194"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale194"
   type: "Scale"
   bottom: "BatchNorm194"
   top: "BatchNorm194"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU193"
@@ -7906,12 +11980,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat95"
   top: "BatchNorm195"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale195"
   type: "Scale"
   bottom: "BatchNorm195"
   top: "BatchNorm195"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU194"
@@ -7943,12 +12038,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution195"
   top: "BatchNorm196"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale196"
   type: "Scale"
   bottom: "BatchNorm196"
   top: "BatchNorm196"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU195"
@@ -7987,12 +12103,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat96"
   top: "BatchNorm197"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale197"
   type: "Scale"
   bottom: "BatchNorm197"
   top: "BatchNorm197"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU196"
@@ -8024,12 +12161,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution197"
   top: "BatchNorm198"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale198"
   type: "Scale"
   bottom: "BatchNorm198"
   top: "BatchNorm198"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU197"
@@ -8068,12 +12226,33 @@ layer {
   type: "BatchNorm"
   bottom: "Concat97"
   top: "BatchNorm199"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale199"
   type: "Scale"
   bottom: "BatchNorm199"
   top: "BatchNorm199"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU198"
@@ -8105,12 +12284,33 @@ layer {
   type: "BatchNorm"
   bottom: "Convolution199"
   top: "BatchNorm200"
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
 }
 layer {
   name: "Scale200"
   type: "Scale"
   bottom: "BatchNorm200"
   top: "BatchNorm200"
+  scale_param {
+    filler {
+      value: 1.0
+    }
+    bias_term: true
+    bias_filler {
+      value: 0.0
+    }
+  }
 }
 layer {
   name: "ReLU199"

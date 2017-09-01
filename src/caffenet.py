@@ -7,8 +7,8 @@ import numpy as np
 
 # helper function for common structures
 def bn_scale_relu_conv(bottom, ks, knum, stride=1, pad=0):
-    _xbn   = L.BatchNorm(bottom)
-    _xscale = L.Scale(_xbn, in_place=True)
+    _xbn   = L.BatchNorm(bottom, param=[dict(lr_mult=0, decay_mult=0), dict(lr_mult=0, decay_mult=0), dict(lr_mult=0, decay_mult=0)])
+    _xscale = L.Scale(_xbn, in_place=True, bias_term=True, filler=dict(value=1), bias_filler=dict(value=0))
     _xrelu = L.ReLU(_xscale, in_place=True)
     _xconv  = L.Convolution(_xrelu, kernel_size=ks, stride=stride, weight_filler=dict(type='xavier'),
                             bias_term=False,bias_filler=dict(type='constant'), num_output=knum, pad=pad)
@@ -18,8 +18,8 @@ def bn_scale_relu_conv(bottom, ks, knum, stride=1, pad=0):
 def conv_bn_scale_relu(bottom, ks, knum, stride=1, pad=0):
     _xconv = L.Convolution(bottom, kernel_size=ks, num_output=knum, stride=stride, weight_filler=dict(type='xavier'),
                            bias_term=False, bias_filler=dict(type='constant'), pad=pad)
-    _xbn   = L.BatchNorm(_xconv)
-    _xscale = L.Scale(_xbn, in_place=True)
+    _xbn   = L.BatchNorm(_xconv, param=[dict(lr_mult=0, decay_mult=0), dict(lr_mult=0, decay_mult=0), dict(lr_mult=0, decay_mult=0)])
+    _xscale = L.Scale(_xbn, in_place=True,  bias_term=True, filler=dict(value=1), bias_filler=dict(value=0))
     _xrelu = L.ReLU(_xscale, in_place=True)
 
     return _xrelu
@@ -170,4 +170,4 @@ DENSE_NET_264_CFG = [
 
 if __name__ == '__main__':
     xnet = DenseNet()
-    xnet.build_model(DENSE_NET_121_CFG)
+    xnet.build_model(DENSE_NET_201_CFG)
